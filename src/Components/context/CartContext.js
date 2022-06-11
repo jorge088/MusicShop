@@ -32,7 +32,7 @@ const CartContextProvider = ({ children }) => {
         setCart(deleteProduct);
     }
     const deleteCart = () => {
-        setCart([]);
+        setCart([]); 
     }
 
     return <CartContext.Provider
