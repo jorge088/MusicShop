@@ -17,6 +17,7 @@ function App() {
 
             <Routes>
               <Route path='/' element={<ItemListContainer />} />
+              <Route path='/categoria/:categoryId' element={<ItemListContainer />} />
             </Routes>
             <Footer />
           </div>
