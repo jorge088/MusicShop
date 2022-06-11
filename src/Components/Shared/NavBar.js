@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars} from '@fortawesome/free-solid-svg-icons';
 import { useState } from "react";
+import CartWidget from "./CartWidget";
 
 const NavBar = () => {
     const [showMenuResponsive, setShowMenuResponsive] = useState(false);
@@ -25,7 +26,7 @@ const NavBar = () => {
                             <Link to={'/'} className={navLinkStyle} aria-current="page" >HOME</Link>
                             <Link to={'/categoria/instrumentos de viento'} className={navLinkStyle}>INSTRUMENTOS DE VIENTO</Link>
                             <Link to={'/categoria/instrumentos de cuerda'} className={navLinkStyle}>INSTRUMENTOS DE CUERDA</Link>
-                            {/* <Link to={'/cart'} className={navLinkStyle} ><CartWidget /></Link> */}
+                            <Link to={'/cart'} className={navLinkStyle} ><CartWidget /></Link>
                         </div>
                     </div>
                     <button className="block text-white sm:hidden text-2xl " onClick={toggleMenuResponsive}><FontAwesomeIcon icon={faBars} /></button>
@@ -34,7 +35,7 @@ const NavBar = () => {
                     <Link to={'/'} className={navLinkStyleResponsive} onClick={checkNavResponsiveShowed}>HOME</Link>
                     <Link to={'/categoria/instrumentos de viento'} className={navLinkStyleResponsive} onClick={checkNavResponsiveShowed} >INSTRUMENTOS DE VIENTO</Link>
                     <Link to={'/categoria/instrumentos de cuerda'} className={navLinkStyleResponsive} onClick={checkNavResponsiveShowed} >INSTRUMENTOS DE CUERDA</Link>
-                    {/* <Link to={'/cart'} className={navLinkStyleResponsive} onClick={checkNavResponsiveShowed} ><CartWidget /></Link> */}
+                    <Link to={'/cart'} className={navLinkStyleResponsive} onClick={checkNavResponsiveShowed} ><CartWidget /></Link>
                 </div>
             </nav>
         </>
